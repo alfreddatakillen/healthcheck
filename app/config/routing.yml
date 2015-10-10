@@ -9,6 +9,9 @@ hwi_oauth_login:
 connect_login:
     path: /login/check-connect
 
+logout:
+    pattern: /logout
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation

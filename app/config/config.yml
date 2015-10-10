@@ -27,19 +27,19 @@ twig:
 hwi_oauth:
     firewall_name: oauth2_area
     resource_owners:
-        oauth2:
+        connect:
             type:                oauth2
             client_id:           %oauth2_client_id%
             client_secret:       %oauth2_client_secret%
             access_token_url:    %oauth2_url%/oauth/v2/token
             authorization_url:   %oauth2_url%/oauth/v2/auth
             infos_url:           %oauth2_url%/api/me
-            user_response_class: HWI\Bundle\OAuthBundle\OAuth\Response\AdvancedPathUserResponse
+            user_response_class: HWI\Bundle\OAuthBundle\OAuth\Response\PathUserResponse
             paths:
                 identifier: id
-                nickname:   username
+                nickname:   name
                 email:      email
-                realname:   realname
+                realname:   name
 
 snc_redis:
     clients:

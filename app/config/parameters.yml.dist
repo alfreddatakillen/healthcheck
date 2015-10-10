@@ -3,7 +3,7 @@ parameters:
     secret: ThisTokenIsNotSoSecretChangeIt
 
     oauth2_url: http://connect.didier.io
-    oauth2_client_id: 4_1jituz4ely74c8o4cwccg4ogg0wg88kkc4c44sgk4kc0sw4gko
-    oauth2_client_secret: 3p1nejubmaqsosscogcw4s8owc08gkscosgocs8kok4088o0w4
+    oauth2_client_id: ~
+    oauth2_client_secret: ~
 
     redis_host: localhost

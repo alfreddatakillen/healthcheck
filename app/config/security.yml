@@ -23,3 +23,5 @@ security:
                 failure_path: /login
                 oauth_user_provider:
                     service: hwi_oauth.user.provider
+            logout:
+                path:   logout
