@@ -1,0 +1,31 @@
+redis:
+    image: redis:3.0
+    ports:
+        - 6379:6379
+
+php:
+    build: ./docker/php
+    links:
+        - redis:redis
+    ports:
+        - 9000:9000
+    volumes:
+        - ./:/srv/http
+    environment:
+        TIMEZONE: 'Europe/Paris'
+        USER_UID: 1000
+        USER_GID: 1000
+
+website:
+    image: nginx
+    links:
+        - php:webstack_php
+    volumes:
+        - ./:/var/www
+        - "./docker/nginx.conf:/nginx.conf"
+    ports:
+        - 80:80
+    command: nginx -c /nginx.conf
+    environment:
+        VIRTUAL_HOST: 'healthcheck.dev.didier.io'
+        VIRTUAL_PORT: 80

@@ -1,19 +1,9 @@
-# This file is a "template" of what your parameters.yml file should look like
-# Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
-# http://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
 parameters:
-    database_host:     127.0.0.1
-    database_port:     ~
-    database_name:     symfony
-    database_user:     root
-    database_password: ~
-    # You should uncomment this if you want use pdo_sqlite
-    # database_path: "%kernel.root_dir%/data.db3"
+    locale: en
+    secret: ThisTokenIsNotSoSecretChangeIt
 
-    mailer_transport:  smtp
-    mailer_host:       127.0.0.1
-    mailer_user:       ~
-    mailer_password:   ~
+    oauth2_url: http://connect.didier.io
+    oauth2_client_id: 4_1jituz4ely74c8o4cwccg4ogg0wg88kkc4c44sgk4kc0sw4gko
+    oauth2_client_secret: 3p1nejubmaqsosscogcw4s8owc08gkscosgocs8kok4088o0w4
 
-    # A secret key that's used to generate certain security-related tokens
-    secret:            ThisTokenIsNotSoSecretChangeIt
+    redis_host: localhost
